@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+        <otfl translate="label" module="googletagmanager">
+            <label>OTFL</label>
+            <sort_order>0</sort_order>
+        </otfl>
+    </tabs>
+    <sections>
+        <googletagmanager>
+            <label>Google Tag Manager</label>
+            <tab>otfl</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>0</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>  
+            <groups>
+                <googletagmanager translate="label">
+                    <label>Google Tag Manager</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <price_type translate="label">
+                            <label>Price Type</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>googletagmanager/system_config_source_priceType</source_model>
+                            <sort_order>15</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </price_type>
+                        <containerid translate="label">
+                            <label>Container Public ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                        </containerid>
+                        <containeridamp translate="label">
+                            <label>Container Public ID for AMP</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                        </containeridamp>
+                        <datalayertransactions translate="label comment">
+                            <label>Data layer: Transactions</label>
+                            <comment>Populates GTM data layer with transaction data.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                        </datalayertransactions>
+                        <datalayertransactiontype translate="label comment">
+                            <label>transactionType</label>
+                            <comment>Optional value for transactionType field.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>31</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <active>1</active>
+                                <datalayertransactions>1</datalayertransactions>
+                            </depends>
+                        </datalayertransactiontype>
+                        <datalayertransactionaffiliation translate="label comment">
+                            <label>transactionAffiliation</label>
+                            <comment>Optional value for transactionAffiliation field.</comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>32</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <active>1</active>
+                                <datalayertransactions>1</datalayertransactions>
+                            </depends>
+                        </datalayertransactionaffiliation>
+                        <datalayervisitors translate="label comment">
+                            <label>Data layer: Visitors</label>
+                            <comment>Populates GTM data layer with visitor data.</comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <depends>
+                                <active>1</active>
+                            </depends>
+                        </datalayervisitors>
+                    </fields>
+                </googletagmanager>
+                <facebookconversionsapi translate="label">
+                    <label>Facebook Conversions API</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>15</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <graphurl translate="label">
+                            <label>Graph URL</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>https://graph.facebook.com/v11.0/</comment>
+                        </graphurl>
+                        <accesstoken translate="label">
+                            <label>Access token</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment></comment>
+                        </accesstoken>
+                        <pixelid translate="label">
+                            <label>Pixel ID</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment></comment>
+                        </pixelid>
+                        <log translate="label">
+                            <label>Log everything</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </log>
+                        <testcode translate="label">
+                            <label>Test Code</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>TEST57525 ou deixe em branco para não usar o Teste de Eventos.</comment>
+                        </testcode>
+                    </fields>
+                </facebookconversionsapi>
+            </groups>
+        </googletagmanager>
+    </sections>
+</config>

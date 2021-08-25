@@ -1,0 +1,8 @@
+<!-- Google Tag Manager -->
+<?php
+	$gtm_url_amp  = "https://www.googletagmanager.com/amp.json?id=";
+	$gtm_url      = Mage::helper('core/url')->getCurrentUrl();
+	$conteiner_id = Mage::helper('googletagmanager')->getContainerIdforAmp();
+?>
+<amp-analytics config="<?php echo $gtm_url_amp . $conteiner_id; ?>&gtm.url=<?php echo str_replace('?amp=1', '', $gtm_url); ?>" data-credentials="include"></amp-analytics>
+<!-- End Google Tag Manager -->

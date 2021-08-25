@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    jQuery(function(){
+        jQuery('#co-billing-form').bind('click', function() {
+            dataLayer.push({
+                'event':'VirtualPageview',
+                'virtualPageURL':'/#' + jQuery(this).attr('id') + ''
+            });
+        });
+        jQuery(this).on('click', 'input[name*="shipping_method"]', function () {
+            dataLayer.push({
+                'event':'VirtualPageview',
+                'virtualPageURL':'/#' + jQuery(this).attr('id') + ''
+            });
+        });
+        jQuery(this).on('click', 'input[name*="payment[method]"]', function () {
+            dataLayer.push({
+                'event':'VirtualPageview',
+                'virtualPageURL':'/#' + jQuery(this).attr('name') + ''
+            });
+        });
+        jQuery(this).on('click', '#checkout-payment-method-load input, #checkout-payment-method-load select', function () {
+            $data = jQuery(this).data('name');
+
+            if ($data != undefined){
+                dataLayer.push({
+                    'event':'VirtualPageview',
+                    'virtualPageURL':'/#' + $data + ''
+                });
+            }
+        });
+    });
+</script>

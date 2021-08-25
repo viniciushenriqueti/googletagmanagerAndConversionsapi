@@ -1,0 +1,10 @@
+"Container Public ID","Container Public ID"
+"Data layer: Transactions","Camada de dados: Transações"
+"Populates GTM data layer with transaction data.","Preenche camada de dados GTM com os dados da transação."
+"transactionType","Tipo de transação"
+"Optional value for transactionType field.","Valor opcional para o campo Tipo de transação."
+"transactionAffiliation","transação Afiliação"
+"Optional value for transactionAffiliation field.","Valor opcional para campo de Afiliação."
+"Data layer: Visitors","Camada de dados: Visitantes"
+"Populates GTM data layer with visitor data.","Preenche camada de dados GTM com os dados de visitantes."
+
